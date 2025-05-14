@@ -1,0 +1,24 @@
+{
+  "build": {
+    "command": "npm run build",
+    "output_directory": "build",
+    "root_directory": ""
+  },
+  "routes": [
+    {
+      "pattern": "/*",
+      "serve": "/index.html",
+      "single_page_app": true
+    }
+  ],
+  "env": {
+    "production": {
+      "REACT_APP_DOCS_API_URL": "https://docs-library.yourdomain.com",
+      "REACT_APP_NEXUS_API_URL": "https://nexus.yourdomain.com/api"
+    },
+    "preview": {
+      "REACT_APP_DOCS_API_URL": "https://docs-library.yourdomain.com",
+      "REACT_APP_NEXUS_API_URL": "https://nexus.yourdomain.com/api"
+    }
+  }
+}

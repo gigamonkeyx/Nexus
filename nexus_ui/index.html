@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus MCP Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <div class="logo-container mb-4">
+                        <img src="logo.svg" alt="Nexus Logo" class="logo">
+                        <h4>Nexus Hub</h4>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <i class="bi bi-house-door"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servers">
+                                <i class="bi bi-server"></i> Servers
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tools">
+                                <i class="bi bi-tools"></i> Tools
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#resources">
+                                <i class="bi bi-journal-text"></i> Resources
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#prompts">
+                                <i class="bi bi-chat-dots"></i> Prompts
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#settings">
+                                <i class="bi bi-gear"></i> Settings
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="user-info">
+                        <img src="avatar.svg" alt="User Avatar" class="avatar">
+                        <div>
+                            <h6>John Doe</h6>
+                            <p>Administrator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Dashboard</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group me-2">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-primary">
+                            <i class="bi bi-plus"></i> Add Server
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Status cards -->
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="card status-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Servers</h5>
+                                <div class="d-flex align-items-center">
+                                    <div class="status-icon bg-primary">
+                                        <i class="bi bi-server"></i>
+                                    </div>
+                                    <div class="ms-3">
+                                        <h2 class="mb-0">3</h2>
+                                        <p class="text-muted mb-0">Active</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card status-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Tools</h5>
+                                <div class="d-flex align-items-center">
+                                    <div class="status-icon bg-success">
+                                        <i class="bi bi-tools"></i>
+                                    </div>
+                                    <div class="ms-3">
+                                        <h2 class="mb-0">12</h2>
+                                        <p class="text-muted mb-0">Available</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card status-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Resources</h5>
+                                <div class="d-flex align-items-center">
+                                    <div class="status-icon bg-info">
+                                        <i class="bi bi-journal-text"></i>
+                                    </div>
+                                    <div class="ms-3">
+                                        <h2 class="mb-0">8</h2>
+                                        <p class="text-muted mb-0">Available</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card status-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Prompts</h5>
+                                <div class="d-flex align-items-center">
+                                    <div class="status-icon bg-warning">
+                                        <i class="bi bi-chat-dots"></i>
+                                    </div>
+                                    <div class="ms-3">
+                                        <h2 class="mb-0">4</h2>
+                                        <p class="text-muted mb-0">Available</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Code Editor section -->
+                <h2 id="code-editor" class="mb-3">Code Editor</h2>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="language-selector" class="form-label">Language</label>
+                                <select id="language-selector" class="form-select">
+                                    <option value="python">Python</option>
+                                    <option value="javascript">JavaScript</option>
+                                    <option value="typescript">TypeScript</option>
+                                    <option value="java">Java</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="tool-selector" class="form-label">Tool</label>
+                                <select id="tool-selector" class="form-select">
+                                    <option value="format_code">Format Code</option>
+                                    <option value="analyze_code">Analyze Code</option>
+                                    <option value="visualize_code_analysis">Visualize Analysis</option>
+                                    <option value="generate_docstring">Generate Docstring</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="code-input" class="form-label">Input Code</label>
+                                <textarea id="code-input" class="form-control code-editor" rows="10"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="code-output" class="form-label">Output</label>
+                                <div id="code-output" class="form-control code-output" rows="10"></div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12 text-end">
+                                <button id="run-tool" class="btn btn-primary">Run Tool</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servers section -->
+                <h2 id="servers" class="mb-3">MCP Servers</h2>
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <div class="card server-card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h5 class="card-title">Code Enhancement</h5>
+                                    <span class="badge bg-success">Active</span>
+                                </div>
+                                <p class="card-text">Provides tools for enhancing code quality, formatting, and documentation.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">4 tools, 3 resources</small>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-primary">Connect</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card server-card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h5 class="card-title">Data Analysis</h5>
+                                    <span class="badge bg-success">Active</span>
+                                </div>
+                                <p class="card-text">Provides tools for data analysis, visualization, and machine learning.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">5 tools, 2 resources</small>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-primary">Connect</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card server-card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h5 class="card-title">Web Development</h5>
+                                    <span class="badge bg-success">Active</span>
+                                </div>
+                                <p class="card-text">Provides tools for web development, design, and optimization.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">3 tools, 3 resources</small>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-primary">Connect</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent activity -->
+                <h2 class="mb-3">Recent Activity</h2>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>Server</th>
+                                        <th>Action</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2023-06-15 14:32</td>
+                                        <td>Code Enhancement</td>
+                                        <td>Tool call: format_code</td>
+                                        <td><span class="badge bg-success">Success</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-06-15 14:30</td>
+                                        <td>Data Analysis</td>
+                                        <td>Resource access: examples/python</td>
+                                        <td><span class="badge bg-success">Success</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-06-15 14:28</td>
+                                        <td>Web Development</td>
+                                        <td>Tool call: analyze_code</td>
+                                        <td><span class="badge bg-success">Success</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-06-15 14:25</td>
+                                        <td>Code Enhancement</td>
+                                        <td>Prompt: code_review</td>
+                                        <td><span class="badge bg-success">Success</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-06-15 14:20</td>
+                                        <td>Data Analysis</td>
+                                        <td>Server connection</td>
+                                        <td><span class="badge bg-success">Connected</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

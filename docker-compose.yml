@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  nexus:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nexus-mcp-hub
+    container_name: nexus-mcp-hub
+    restart: unless-stopped
+    ports:
+      - "8000:8000"  # API port
+      - "8080:8080"  # UI port
+    volumes:
+      - ./config:/app/config
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=INFO
+    command: ["--config", "config/nexus.json", "--log-level", "INFO"]
+    networks:
+      - nexus-network
+
+  # Example MCP server
+  rag-server:
+    build:
+      context: ./examples/rag-server
+      dockerfile: Dockerfile
+    image: nexus-rag-server
+    container_name: nexus-rag-server
+    restart: unless-stopped
+    depends_on:
+      - nexus
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=INFO
+      - NEXUS_API_URL=http://nexus:8000
+    networks:
+      - nexus-network
+
+  # Example MCP server
+  tools-server:
+    build:
+      context: ./examples/tools-server
+      dockerfile: Dockerfile
+    image: nexus-tools-server
+    container_name: nexus-tools-server
+    restart: unless-stopped
+    depends_on:
+      - nexus
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=INFO
+      - NEXUS_API_URL=http://nexus:8000
+    networks:
+      - nexus-network
+
+networks:
+  nexus-network:
+    driver: bridge

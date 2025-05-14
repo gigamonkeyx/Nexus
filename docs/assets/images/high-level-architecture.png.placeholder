@@ -1,0 +1,28 @@
+This is a placeholder for the High-Level Architecture diagram.
+
+The diagram should illustrate:
+1. Nexus Hub - The central management component
+   - Server Registry
+   - Request Router
+   - Authentication Service
+   - Monitoring System
+2. MCP Servers - Specialized servers providing specific capabilities
+   - Ollama MCP (Port 3011)
+   - ComfyUI MCP (Port 3020)
+   - Supabase MCP (Port 3007)
+   - Terminal MCP (Port 3014)
+   - Memory Server (stdio)
+   - File Explorer (stdio)
+   - Code Sandbox (stdio)
+3. Agents - AI assistants that leverage multiple MCP servers
+   - CodeAssistant
+   - Librarian
+   - DataSage
+   - Muse
+   - Sage
+4. Client Applications - User interfaces for interacting with agents
+   - Web Interface
+   - VS Code Extension
+   - API Clients
+
+The diagram should use a hub-and-spoke model to show the central role of the Nexus Hub.

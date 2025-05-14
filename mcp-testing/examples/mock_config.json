@@ -1,0 +1,116 @@
+[
+  {
+    "tool": "get_hub_status",
+    "response": {
+      "result": {
+        "running": true,
+        "servers": 3,
+        "clients": 2,
+        "uptime": "2d 5h 30m",
+        "version": "1.0.0"
+      }
+    },
+    "delay_ms": 50
+  },
+  {
+    "tool": "list_servers",
+    "response": {
+      "result": {
+        "servers": {
+          "server1": {
+            "id": "server1",
+            "running": true,
+            "connected": true,
+            "config": {
+              "command": "python",
+              "args": ["-m", "http.server", "8001"]
+            }
+          },
+          "server2": {
+            "id": "server2",
+            "running": true,
+            "connected": true,
+            "config": {
+              "command": "python",
+              "args": ["-m", "http.server", "8002"]
+            }
+          },
+          "server3": {
+            "id": "server3",
+            "running": false,
+            "connected": false,
+            "config": {
+              "command": "python",
+              "args": ["-m", "http.server", "8003"]
+            }
+          }
+        }
+      }
+    },
+    "delay_ms": 100
+  },
+  {
+    "tool": "register_server",
+    "parameters_matcher": {
+      "id": "test-server"
+    },
+    "response": {
+      "result": {
+        "id": "test-server",
+        "running": false,
+        "connected": false,
+        "config": {
+          "command": "python",
+          "args": ["-m", "http.server", "8000"]
+        }
+      }
+    },
+    "delay_ms": 150
+  },
+  {
+    "tool": "connect_server",
+    "parameters_matcher": {
+      "id": "test-server"
+    },
+    "response": {
+      "result": {
+        "id": "test-server",
+        "running": true,
+        "connected": true,
+        "config": {
+          "command": "python",
+          "args": ["-m", "http.server", "8000"]
+        }
+      }
+    },
+    "delay_ms": 200
+  },
+  {
+    "tool": "disconnect_server",
+    "parameters_matcher": {
+      "id": "test-server"
+    },
+    "response": {
+      "result": {
+        "id": "test-server",
+        "running": false,
+        "connected": false,
+        "config": {
+          "command": "python",
+          "args": ["-m", "http.server", "8000"]
+        }
+      }
+    },
+    "delay_ms": 200
+  },
+  {
+    "tool": "error_example",
+    "response": {
+      "error": {
+        "type": "server_error",
+        "message": "This is a simulated server error"
+      }
+    },
+    "error_rate": 1.0
+  }
+]

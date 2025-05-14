@@ -1,0 +1,821 @@
+2025-05-13 16:12:28,922 - __main__ - DEBUG - Debug logging enabled
+2025-05-13 16:12:28,922 - __main__ - INFO - Starting Nexus MCP Hub
+2025-05-13 16:12:28,922 - nexus.core.hub.server_manager - INFO - Server Manager initialized
+2025-05-13 16:12:28,923 - nexus.core.hub.client_manager - INFO - Client Manager initialized
+2025-05-13 16:12:28,923 - nexus.core.hub.registry - INFO - Server Registry initialized
+2025-05-13 16:12:28,923 - nexus.core.router.router - DEBUG - Added route: ALL_CLIENTS -> HUB
+2025-05-13 16:12:28,923 - nexus.core.router.router - DEBUG - Added route: HUB -> ALL_CLIENTS (notifications/*)
+2025-05-13 16:12:28,923 - nexus.core.router.router - INFO - Message Router initialized
+2025-05-13 16:12:28,924 - nexus.core.security.auth - WARNING - Users file not found: users.json
+2025-05-13 16:12:28,924 - nexus.core.security.auth - WARNING - Tokens file not found: tokens.json
+2025-05-13 16:12:28,924 - nexus.core.security.acl - WARNING - Roles file not found: roles.json
+2025-05-13 16:12:28,925 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_uptime
+2025-05-13 16:12:28,925 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_server_count
+2025-05-13 16:12:28,925 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_client_count
+2025-05-13 16:12:28,925 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_mcp_server_count
+2025-05-13 16:12:28,925 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_mcp_client_count
+2025-05-13 16:12:28,925 - nexus.core.monitoring.metrics - DEBUG - Registered metric: message_count
+2025-05-13 16:12:28,926 - nexus.core.monitoring.metrics - DEBUG - Registered metric: message_error_count
+2025-05-13 16:12:28,926 - nexus.core.monitoring.metrics - DEBUG - Registered metric: message_processing_time
+2025-05-13 16:12:28,926 - nexus.core.monitoring.metrics - DEBUG - Registered metric: server_start_count
+2025-05-13 16:12:28,926 - nexus.core.monitoring.metrics - DEBUG - Registered metric: server_stop_count
+2025-05-13 16:12:28,926 - nexus.core.monitoring.metrics - DEBUG - Registered metric: server_restart_count
+2025-05-13 16:12:28,926 - nexus.core.monitoring.metrics - DEBUG - Registered metric: client_connect_count
+2025-05-13 16:12:28,927 - nexus.core.monitoring.metrics - DEBUG - Registered metric: client_disconnect_count
+2025-05-13 16:12:28,927 - nexus.core.monitoring.metrics - DEBUG - Registered metric: auth_success_count
+2025-05-13 16:12:28,927 - nexus.core.monitoring.metrics - DEBUG - Registered metric: auth_failure_count
+2025-05-13 16:12:28,927 - nexus.core.monitoring.metrics - DEBUG - Registered metric: api_request_count
+2025-05-13 16:12:28,927 - nexus.core.monitoring.metrics - DEBUG - Registered metric: api_error_count
+2025-05-13 16:12:28,927 - nexus.core.monitoring.metrics - DEBUG - Registered metric: api_request_time
+2025-05-13 16:12:28,928 - nexus.core.monitoring.metrics - INFO - Metrics Manager initialized
+2025-05-13 16:12:28,928 - nexus.core.monitoring.health - INFO - Health Manager initialized
+2025-05-13 16:12:28,928 - nexus.core.hub.registry - INFO - Registry file not found: D:\mcp\nexus\src\nexus\core\../../../config/registry.json
+2025-05-13 16:12:28,928 - nexus.core.hub.manager - DEBUG - Hub configuration loaded: host=localhost, port=8000
+2025-05-13 16:12:28,929 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.SERVER
+2025-05-13 16:12:28,929 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.CLIENT
+2025-05-13 16:12:28,929 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.HUB
+2025-05-13 16:12:28,929 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.ALL_SERVERS
+2025-05-13 16:12:28,929 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.ALL_CLIENTS
+2025-05-13 16:12:28,929 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.CAPABILITY
+2025-05-13 16:12:28,930 - nexus.core.monitoring.health - DEBUG - Registered health check: hub_status
+2025-05-13 16:12:28,930 - nexus.core.monitoring.health - DEBUG - Registered health check: server_manager_status
+2025-05-13 16:12:28,930 - nexus.core.monitoring.health - DEBUG - Registered health check: client_manager_status
+2025-05-13 16:12:28,930 - nexus.core.monitoring.health - DEBUG - Registered health check: registry_status
+2025-05-13 16:12:28,930 - nexus.core.hub.manager - INFO - Hub Manager initialized
+2025-05-13 16:12:28,930 - nexus.core.hub.manager - INFO - Starting Hub Manager
+2025-05-13 16:12:28,931 - nexus.core.hub.registry - INFO - Registry file not found: D:\mcp\nexus\src\nexus\core\../../../config/registry.json
+2025-05-13 16:12:28,931 - nexus.core.hub.server_manager - INFO - Starting Server Manager
+2025-05-13 16:12:28,931 - nexus.core.hub.server_manager - INFO - Server Manager started
+2025-05-13 16:12:28,931 - nexus.core.hub.client_manager - INFO - Starting Client Manager
+2025-05-13 16:12:28,932 - nexus.core.hub.client_manager - INFO - Client Manager started
+2025-05-13 16:12:28,932 - nexus.core.ui.server - INFO - Starting UI Server
+2025-05-13 16:12:28,932 - nexus.core.ui.server - INFO - UI Server started (mock implementation)
+2025-05-13 16:12:28,932 - nexus.core.monitoring.metrics - INFO - Starting Metrics Manager
+2025-05-13 16:12:28,933 - nexus.core.monitoring.metrics - INFO - Metrics Manager started
+2025-05-13 16:12:28,933 - nexus.core.monitoring.health - INFO - Starting Health Manager
+2025-05-13 16:12:28,933 - nexus.core.monitoring.health - INFO - Health Manager started
+2025-05-13 16:12:28,933 - nexus.core.hub.manager - INFO - Hub Manager started on localhost:8000
+2025-05-13 16:12:28,941 - nexus.api.server - INFO - API server initialized
+2025-05-13 16:12:28,944 - nexus.core.monitoring.health - INFO - Overall health status: degraded
+2025-05-13 16:12:28,952 - nexus.api.server - INFO - API server started on http://localhost:8000
+2025-05-13 16:12:40,990 - aiohttp.access - INFO - ::1 [13/May/2025:15:12:40 -0800] "GET / HTTP/1.1" 401 205 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-05-13 16:12:41,233 - aiohttp.access - INFO - ::1 [13/May/2025:15:12:41 -0800] "GET /favicon.ico HTTP/1.1" 401 205 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-05-13 16:13:28,950 - nexus.core.monitoring.health - INFO - Overall health status: degraded
+2025-05-13 16:14:28,961 - nexus.core.monitoring.health - INFO - Overall health status: degraded
+2025-05-13 16:15:28,984 - nexus.core.monitoring.health - INFO - Overall health status: degraded
+2025-05-13 16:16:29,000 - nexus.core.monitoring.health - INFO - Overall health status: degraded
+2025-05-13 16:17:29,011 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:18:29,015 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:19:29,023 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:20:29,040 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:21:29,060 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:22:29,071 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:23:29,075 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:24:29,078 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:25:29,079 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:26:29,082 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:27:29,085 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:27:39,160 - __main__ - DEBUG - Debug logging enabled
+2025-05-13 16:27:39,160 - __main__ - INFO - Starting Nexus MCP Hub
+2025-05-13 16:27:39,160 - nexus.core.hub.server_manager - INFO - Server Manager initialized
+2025-05-13 16:27:39,161 - nexus.core.hub.client_manager - INFO - Client Manager initialized
+2025-05-13 16:27:39,161 - nexus.core.hub.registry - INFO - Server Registry initialized
+2025-05-13 16:27:39,161 - nexus.core.router.router - DEBUG - Added route: ALL_CLIENTS -> HUB
+2025-05-13 16:27:39,161 - nexus.core.router.router - DEBUG - Added route: HUB -> ALL_CLIENTS (notifications/*)
+2025-05-13 16:27:39,162 - nexus.core.router.router - INFO - Message Router initialized
+2025-05-13 16:27:39,162 - nexus.core.security.auth - WARNING - Users file not found: users.json
+2025-05-13 16:27:39,162 - nexus.core.security.auth - WARNING - Tokens file not found: tokens.json
+2025-05-13 16:27:39,163 - nexus.core.security.acl - WARNING - Roles file not found: roles.json
+2025-05-13 16:27:39,163 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_uptime
+2025-05-13 16:27:39,163 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_server_count
+2025-05-13 16:27:39,163 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_client_count
+2025-05-13 16:27:39,163 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_mcp_server_count
+2025-05-13 16:27:39,164 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_mcp_client_count
+2025-05-13 16:27:39,164 - nexus.core.monitoring.metrics - DEBUG - Registered metric: message_count
+2025-05-13 16:27:39,164 - nexus.core.monitoring.metrics - DEBUG - Registered metric: message_error_count
+2025-05-13 16:27:39,164 - nexus.core.monitoring.metrics - DEBUG - Registered metric: message_processing_time
+2025-05-13 16:27:39,165 - nexus.core.monitoring.metrics - DEBUG - Registered metric: server_start_count
+2025-05-13 16:27:39,165 - nexus.core.monitoring.metrics - DEBUG - Registered metric: server_stop_count
+2025-05-13 16:27:39,165 - nexus.core.monitoring.metrics - DEBUG - Registered metric: server_restart_count
+2025-05-13 16:27:39,165 - nexus.core.monitoring.metrics - DEBUG - Registered metric: client_connect_count
+2025-05-13 16:27:39,165 - nexus.core.monitoring.metrics - DEBUG - Registered metric: client_disconnect_count
+2025-05-13 16:27:39,166 - nexus.core.monitoring.metrics - DEBUG - Registered metric: auth_success_count
+2025-05-13 16:27:39,166 - nexus.core.monitoring.metrics - DEBUG - Registered metric: auth_failure_count
+2025-05-13 16:27:39,166 - nexus.core.monitoring.metrics - DEBUG - Registered metric: api_request_count
+2025-05-13 16:27:39,166 - nexus.core.monitoring.metrics - DEBUG - Registered metric: api_error_count
+2025-05-13 16:27:39,166 - nexus.core.monitoring.metrics - DEBUG - Registered metric: api_request_time
+2025-05-13 16:27:39,167 - nexus.core.monitoring.metrics - INFO - Metrics Manager initialized
+2025-05-13 16:27:39,167 - nexus.core.monitoring.health - INFO - Health Manager initialized
+2025-05-13 16:27:39,167 - nexus.core.hub.registry - INFO - Registry file not found: D:\mcp\nexus\src\nexus\core\../../../config/registry.json
+2025-05-13 16:27:39,167 - nexus.core.hub.manager - DEBUG - Hub configuration loaded: host=localhost, port=8000
+2025-05-13 16:27:39,168 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.SERVER
+2025-05-13 16:27:39,168 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.CLIENT
+2025-05-13 16:27:39,168 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.HUB
+2025-05-13 16:27:39,168 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.ALL_SERVERS
+2025-05-13 16:27:39,169 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.ALL_CLIENTS
+2025-05-13 16:27:39,169 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.CAPABILITY
+2025-05-13 16:27:39,169 - nexus.core.monitoring.health - DEBUG - Registered health check: hub_status
+2025-05-13 16:27:39,169 - nexus.core.monitoring.health - DEBUG - Registered health check: server_manager_status
+2025-05-13 16:27:39,170 - nexus.core.monitoring.health - DEBUG - Registered health check: client_manager_status
+2025-05-13 16:27:39,170 - nexus.core.monitoring.health - DEBUG - Registered health check: registry_status
+2025-05-13 16:27:39,170 - nexus.core.hub.manager - INFO - Hub Manager initialized
+2025-05-13 16:27:39,170 - nexus.core.hub.manager - INFO - Starting Hub Manager
+2025-05-13 16:27:39,171 - nexus.core.hub.registry - INFO - Registry file not found: D:\mcp\nexus\src\nexus\core\../../../config/registry.json
+2025-05-13 16:27:39,171 - nexus.core.hub.server_manager - INFO - Starting Server Manager
+2025-05-13 16:27:39,171 - nexus.core.hub.server_manager - INFO - Server Manager started
+2025-05-13 16:27:39,172 - nexus.core.hub.client_manager - INFO - Starting Client Manager
+2025-05-13 16:27:39,172 - nexus.core.hub.client_manager - INFO - Client Manager started
+2025-05-13 16:27:39,172 - nexus.core.ui.server - INFO - Starting UI Server
+2025-05-13 16:27:39,172 - nexus.core.ui.server - INFO - UI Server started (mock implementation)
+2025-05-13 16:27:39,173 - nexus.core.monitoring.metrics - INFO - Starting Metrics Manager
+2025-05-13 16:27:39,173 - nexus.core.monitoring.metrics - INFO - Metrics Manager started
+2025-05-13 16:27:39,174 - nexus.core.monitoring.health - INFO - Starting Health Manager
+2025-05-13 16:27:39,174 - nexus.core.monitoring.health - INFO - Health Manager started
+2025-05-13 16:27:39,174 - nexus.core.hub.manager - INFO - Hub Manager started on localhost:8000
+2025-05-13 16:27:39,178 - nexus.api.server - INFO - API server initialized
+2025-05-13 16:27:39,180 - nexus.core.monitoring.health - INFO - Overall health status: degraded
+2025-05-13 16:27:39,186 - __main__ - ERROR - Error in main: [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+Traceback (most recent call last):
+  File "D:\mcp\nexus\src\nexus\main.py", line 68, in main
+    await api_server.start()
+  File "D:\mcp\nexus\src\nexus\api\server.py", line 202, in start
+    await self.site.start()
+  File "D:\Python311\Lib\site-packages\aiohttp\web_runner.py", line 119, in start
+    self._server = await loop.create_server(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python311\Lib\asyncio\base_events.py", line 1536, in create_server
+    raise OSError(err.errno, msg) from None
+OSError: [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-05-13 16:27:39,197 - nexus.api.server - INFO - API server stopped
+2025-05-13 16:27:39,197 - nexus.core.hub.manager - INFO - Stopping Hub Manager
+2025-05-13 16:27:39,197 - nexus.core.hub.server_manager - INFO - Stopping all servers
+2025-05-13 16:27:39,197 - nexus.core.hub.client_manager - INFO - Stopping Client Manager
+2025-05-13 16:27:39,198 - nexus.core.hub.client_manager - INFO - Client Manager stopped
+2025-05-13 16:27:39,198 - nexus.core.ui.server - INFO - Stopping UI Server
+2025-05-13 16:27:39,198 - nexus.core.ui.server - INFO - UI Server stopped (mock implementation)
+2025-05-13 16:27:39,199 - nexus.core.hub.manager - DEBUG - Metrics update task cancelled
+2025-05-13 16:27:39,199 - nexus.core.monitoring.metrics - INFO - Stopping Metrics Manager
+2025-05-13 16:27:39,199 - nexus.core.monitoring.metrics - DEBUG - Metrics export task cancelled
+2025-05-13 16:27:39,199 - nexus.core.monitoring.metrics - INFO - Metrics Manager stopped
+2025-05-13 16:27:39,199 - nexus.core.monitoring.health - INFO - Stopping Health Manager
+2025-05-13 16:27:39,200 - nexus.core.monitoring.health - DEBUG - Health check task cancelled
+2025-05-13 16:27:39,200 - nexus.core.monitoring.health - INFO - Health Manager stopped
+2025-05-13 16:27:39,200 - nexus.core.hub.server_manager - INFO - Stopping Server Manager
+2025-05-13 16:27:39,200 - nexus.core.hub.server_manager - INFO - Stopping all servers
+2025-05-13 16:27:39,201 - nexus.core.hub.server_manager - INFO - Server Manager stopped
+2025-05-13 16:27:39,201 - nexus.core.hub.manager - INFO - Hub Manager stopped
+2025-05-13 16:27:39,201 - __main__ - INFO - Nexus MCP Hub stopped
+2025-05-13 16:28:29,105 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:29:20,109 - __main__ - DEBUG - Debug logging enabled
+2025-05-13 16:29:20,110 - __main__ - INFO - Starting Nexus MCP Hub
+2025-05-13 16:29:20,110 - nexus.core.hub.server_manager - INFO - Server Manager initialized
+2025-05-13 16:29:20,110 - nexus.core.hub.client_manager - INFO - Client Manager initialized
+2025-05-13 16:29:20,111 - nexus.core.hub.registry - INFO - Server Registry initialized
+2025-05-13 16:29:20,111 - nexus.core.router.router - DEBUG - Added route: ALL_CLIENTS -> HUB
+2025-05-13 16:29:20,111 - nexus.core.router.router - DEBUG - Added route: HUB -> ALL_CLIENTS (notifications/*)
+2025-05-13 16:29:20,111 - nexus.core.router.router - INFO - Message Router initialized
+2025-05-13 16:29:20,111 - nexus.core.security.auth - WARNING - Users file not found: users.json
+2025-05-13 16:29:20,112 - nexus.core.security.auth - WARNING - Tokens file not found: tokens.json
+2025-05-13 16:29:20,112 - nexus.core.security.acl - WARNING - Roles file not found: roles.json
+2025-05-13 16:29:20,112 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_uptime
+2025-05-13 16:29:20,113 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_server_count
+2025-05-13 16:29:20,113 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_client_count
+2025-05-13 16:29:20,113 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_mcp_server_count
+2025-05-13 16:29:20,113 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_mcp_client_count
+2025-05-13 16:29:20,113 - nexus.core.monitoring.metrics - DEBUG - Registered metric: message_count
+2025-05-13 16:29:20,114 - nexus.core.monitoring.metrics - DEBUG - Registered metric: message_error_count
+2025-05-13 16:29:20,114 - nexus.core.monitoring.metrics - DEBUG - Registered metric: message_processing_time
+2025-05-13 16:29:20,114 - nexus.core.monitoring.metrics - DEBUG - Registered metric: server_start_count
+2025-05-13 16:29:20,114 - nexus.core.monitoring.metrics - DEBUG - Registered metric: server_stop_count
+2025-05-13 16:29:20,114 - nexus.core.monitoring.metrics - DEBUG - Registered metric: server_restart_count
+2025-05-13 16:29:20,115 - nexus.core.monitoring.metrics - DEBUG - Registered metric: client_connect_count
+2025-05-13 16:29:20,115 - nexus.core.monitoring.metrics - DEBUG - Registered metric: client_disconnect_count
+2025-05-13 16:29:20,115 - nexus.core.monitoring.metrics - DEBUG - Registered metric: auth_success_count
+2025-05-13 16:29:20,115 - nexus.core.monitoring.metrics - DEBUG - Registered metric: auth_failure_count
+2025-05-13 16:29:20,115 - nexus.core.monitoring.metrics - DEBUG - Registered metric: api_request_count
+2025-05-13 16:29:20,116 - nexus.core.monitoring.metrics - DEBUG - Registered metric: api_error_count
+2025-05-13 16:29:20,116 - nexus.core.monitoring.metrics - DEBUG - Registered metric: api_request_time
+2025-05-13 16:29:20,116 - nexus.core.monitoring.metrics - INFO - Metrics Manager initialized
+2025-05-13 16:29:20,116 - nexus.core.monitoring.health - INFO - Health Manager initialized
+2025-05-13 16:29:20,116 - nexus.core.hub.registry - INFO - Registry file not found: D:\mcp\nexus\src\nexus\core\../../../config/registry.json
+2025-05-13 16:29:20,117 - nexus.core.hub.manager - DEBUG - Hub configuration loaded: host=localhost, port=8000
+2025-05-13 16:29:20,117 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.SERVER
+2025-05-13 16:29:20,117 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.CLIENT
+2025-05-13 16:29:20,117 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.HUB
+2025-05-13 16:29:20,118 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.ALL_SERVERS
+2025-05-13 16:29:20,118 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.ALL_CLIENTS
+2025-05-13 16:29:20,118 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.CAPABILITY
+2025-05-13 16:29:20,118 - nexus.core.monitoring.health - DEBUG - Registered health check: hub_status
+2025-05-13 16:29:20,118 - nexus.core.monitoring.health - DEBUG - Registered health check: server_manager_status
+2025-05-13 16:29:20,119 - nexus.core.monitoring.health - DEBUG - Registered health check: client_manager_status
+2025-05-13 16:29:20,119 - nexus.core.monitoring.health - DEBUG - Registered health check: registry_status
+2025-05-13 16:29:20,119 - nexus.core.hub.manager - INFO - Hub Manager initialized
+2025-05-13 16:29:20,119 - nexus.core.hub.manager - INFO - Starting Hub Manager
+2025-05-13 16:29:20,120 - nexus.core.hub.registry - INFO - Registry file not found: D:\mcp\nexus\src\nexus\core\../../../config/registry.json
+2025-05-13 16:29:20,120 - nexus.core.hub.server_manager - INFO - Starting Server Manager
+2025-05-13 16:29:20,120 - nexus.core.hub.server_manager - INFO - Server Manager started
+2025-05-13 16:29:20,120 - nexus.core.hub.client_manager - INFO - Starting Client Manager
+2025-05-13 16:29:20,120 - nexus.core.hub.client_manager - INFO - Client Manager started
+2025-05-13 16:29:20,121 - nexus.core.ui.server - INFO - Starting UI Server
+2025-05-13 16:29:20,121 - nexus.core.ui.server - INFO - UI Server started (mock implementation)
+2025-05-13 16:29:20,122 - nexus.core.monitoring.metrics - INFO - Starting Metrics Manager
+2025-05-13 16:29:20,122 - nexus.core.monitoring.metrics - INFO - Metrics Manager started
+2025-05-13 16:29:20,122 - nexus.core.monitoring.health - INFO - Starting Health Manager
+2025-05-13 16:29:20,123 - nexus.core.monitoring.health - INFO - Health Manager started
+2025-05-13 16:29:20,123 - nexus.core.hub.manager - INFO - Hub Manager started on localhost:8000
+2025-05-13 16:29:20,129 - nexus.api.server - INFO - API server initialized
+2025-05-13 16:29:20,132 - nexus.core.monitoring.health - INFO - Overall health status: degraded
+2025-05-13 16:29:20,138 - __main__ - ERROR - Error in main: [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+Traceback (most recent call last):
+  File "D:\mcp\nexus\src\nexus\main.py", line 68, in main
+    await api_server.start()
+  File "D:\mcp\nexus\src\nexus\api\server.py", line 202, in start
+    await self.site.start()
+  File "D:\Python311\Lib\site-packages\aiohttp\web_runner.py", line 119, in start
+    self._server = await loop.create_server(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python311\Lib\asyncio\base_events.py", line 1536, in create_server
+    raise OSError(err.errno, msg) from None
+OSError: [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-05-13 16:29:20,141 - nexus.api.server - INFO - API server stopped
+2025-05-13 16:29:20,142 - nexus.core.hub.manager - INFO - Stopping Hub Manager
+2025-05-13 16:29:20,142 - nexus.core.hub.server_manager - INFO - Stopping all servers
+2025-05-13 16:29:20,142 - nexus.core.hub.client_manager - INFO - Stopping Client Manager
+2025-05-13 16:29:20,143 - nexus.core.hub.client_manager - INFO - Client Manager stopped
+2025-05-13 16:29:20,143 - nexus.core.ui.server - INFO - Stopping UI Server
+2025-05-13 16:29:20,143 - nexus.core.ui.server - INFO - UI Server stopped (mock implementation)
+2025-05-13 16:29:20,143 - nexus.core.hub.manager - DEBUG - Metrics update task cancelled
+2025-05-13 16:29:20,144 - nexus.core.monitoring.metrics - INFO - Stopping Metrics Manager
+2025-05-13 16:29:20,144 - nexus.core.monitoring.metrics - DEBUG - Metrics export task cancelled
+2025-05-13 16:29:20,144 - nexus.core.monitoring.metrics - INFO - Metrics Manager stopped
+2025-05-13 16:29:20,144 - nexus.core.monitoring.health - INFO - Stopping Health Manager
+2025-05-13 16:29:20,145 - nexus.core.monitoring.health - DEBUG - Health check task cancelled
+2025-05-13 16:29:20,145 - nexus.core.monitoring.health - INFO - Health Manager stopped
+2025-05-13 16:29:20,145 - nexus.core.hub.server_manager - INFO - Stopping Server Manager
+2025-05-13 16:29:20,145 - nexus.core.hub.server_manager - INFO - Stopping all servers
+2025-05-13 16:29:20,146 - nexus.core.hub.server_manager - INFO - Server Manager stopped
+2025-05-13 16:29:20,146 - nexus.core.hub.manager - INFO - Hub Manager stopped
+2025-05-13 16:29:20,146 - __main__ - INFO - Nexus MCP Hub stopped
+2025-05-13 16:29:29,116 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:29:34,059 - aiohttp.access - INFO - ::1 [13/May/2025:15:29:34 -0800] "POST /api/servers/register HTTP/1.1" 401 205 "-" "axios/1.9.0"
+2025-05-13 16:29:36,109 - aiohttp.access - INFO - ::1 [13/May/2025:15:29:36 -0800] "POST /api/servers/register HTTP/1.1" 401 205 "-" "axios/1.9.0"
+2025-05-13 16:30:29,133 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:31:29,145 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:32:29,149 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:33:29,176 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:34:29,232 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:35:29,246 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:36:29,248 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:36:54,052 - aiohttp.access - INFO - ::1 [13/May/2025:15:36:54 -0800] "GET / HTTP/1.1" 401 205 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.5737"
+2025-05-13 16:37:29,235 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:38:29,228 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:39:29,235 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:39:47,261 - aiohttp.access - INFO - ::1 [13/May/2025:15:39:47 -0800] "GET / HTTP/1.1" 401 205 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.5737"
+2025-05-13 16:40:29,247 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:41:29,261 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:42:29,271 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:43:29,296 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:44:29,304 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:44:35,043 - aiohttp.access - INFO - ::1 [13/May/2025:15:44:35 -0800] "GET / HTTP/1.1" 401 205 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.5737"
+2025-05-13 16:44:37,069 - aiohttp.access - INFO - ::1 [13/May/2025:15:44:37 -0800] "GET / HTTP/1.1" 401 205 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.5737"
+2025-05-13 16:44:39,083 - aiohttp.access - INFO - ::1 [13/May/2025:15:44:39 -0800] "GET / HTTP/1.1" 401 205 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.5737"
+2025-05-13 16:44:41,210 - __main__ - DEBUG - Debug logging enabled
+2025-05-13 16:44:41,210 - __main__ - INFO - Starting Nexus MCP Hub
+2025-05-13 16:44:41,211 - nexus.core.hub.server_manager - INFO - Server Manager initialized
+2025-05-13 16:44:41,211 - nexus.core.hub.client_manager - INFO - Client Manager initialized
+2025-05-13 16:44:41,211 - nexus.core.hub.registry - INFO - Server Registry initialized
+2025-05-13 16:44:41,211 - nexus.core.router.router - DEBUG - Added route: ALL_CLIENTS -> HUB
+2025-05-13 16:44:41,211 - nexus.core.router.router - DEBUG - Added route: HUB -> ALL_CLIENTS (notifications/*)
+2025-05-13 16:44:41,212 - nexus.core.router.router - INFO - Message Router initialized
+2025-05-13 16:44:41,212 - nexus.core.security.auth - WARNING - Users file not found: users.json
+2025-05-13 16:44:41,212 - nexus.core.security.auth - WARNING - Tokens file not found: tokens.json
+2025-05-13 16:44:41,213 - nexus.core.security.acl - WARNING - Roles file not found: roles.json
+2025-05-13 16:44:41,213 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_uptime
+2025-05-13 16:44:41,214 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_server_count
+2025-05-13 16:44:41,214 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_client_count
+2025-05-13 16:44:41,214 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_mcp_server_count
+2025-05-13 16:44:41,214 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_mcp_client_count
+2025-05-13 16:44:41,214 - nexus.core.monitoring.metrics - DEBUG - Registered metric: message_count
+2025-05-13 16:44:41,214 - nexus.core.monitoring.metrics - DEBUG - Registered metric: message_error_count
+2025-05-13 16:44:41,215 - nexus.core.monitoring.metrics - DEBUG - Registered metric: message_processing_time
+2025-05-13 16:44:41,215 - nexus.core.monitoring.metrics - DEBUG - Registered metric: server_start_count
+2025-05-13 16:44:41,215 - nexus.core.monitoring.metrics - DEBUG - Registered metric: server_stop_count
+2025-05-13 16:44:41,215 - nexus.core.monitoring.metrics - DEBUG - Registered metric: server_restart_count
+2025-05-13 16:44:41,215 - nexus.core.monitoring.metrics - DEBUG - Registered metric: client_connect_count
+2025-05-13 16:44:41,216 - nexus.core.monitoring.metrics - DEBUG - Registered metric: client_disconnect_count
+2025-05-13 16:44:41,216 - nexus.core.monitoring.metrics - DEBUG - Registered metric: auth_success_count
+2025-05-13 16:44:41,216 - nexus.core.monitoring.metrics - DEBUG - Registered metric: auth_failure_count
+2025-05-13 16:44:41,216 - nexus.core.monitoring.metrics - DEBUG - Registered metric: api_request_count
+2025-05-13 16:44:41,216 - nexus.core.monitoring.metrics - DEBUG - Registered metric: api_error_count
+2025-05-13 16:44:41,216 - nexus.core.monitoring.metrics - DEBUG - Registered metric: api_request_time
+2025-05-13 16:44:41,217 - nexus.core.monitoring.metrics - INFO - Metrics Manager initialized
+2025-05-13 16:44:41,217 - nexus.core.monitoring.health - INFO - Health Manager initialized
+2025-05-13 16:44:41,217 - nexus.core.hub.registry - INFO - Registry file not found: D:\mcp\nexus\src\nexus\core\../../../config/registry.json
+2025-05-13 16:44:41,217 - nexus.core.hub.manager - DEBUG - Hub configuration loaded: host=localhost, port=8000
+2025-05-13 16:44:41,218 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.SERVER
+2025-05-13 16:44:41,218 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.CLIENT
+2025-05-13 16:44:41,218 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.HUB
+2025-05-13 16:44:41,218 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.ALL_SERVERS
+2025-05-13 16:44:41,218 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.ALL_CLIENTS
+2025-05-13 16:44:41,219 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.CAPABILITY
+2025-05-13 16:44:41,219 - nexus.core.monitoring.health - DEBUG - Registered health check: hub_status
+2025-05-13 16:44:41,219 - nexus.core.monitoring.health - DEBUG - Registered health check: server_manager_status
+2025-05-13 16:44:41,219 - nexus.core.monitoring.health - DEBUG - Registered health check: client_manager_status
+2025-05-13 16:44:41,219 - nexus.core.monitoring.health - DEBUG - Registered health check: registry_status
+2025-05-13 16:44:41,219 - nexus.core.hub.manager - INFO - Hub Manager initialized
+2025-05-13 16:44:41,220 - nexus.core.hub.manager - INFO - Starting Hub Manager
+2025-05-13 16:44:41,220 - nexus.core.hub.registry - INFO - Registry file not found: D:\mcp\nexus\src\nexus\core\../../../config/registry.json
+2025-05-13 16:44:41,220 - nexus.core.hub.server_manager - INFO - Starting Server Manager
+2025-05-13 16:44:41,220 - nexus.core.hub.server_manager - INFO - Server Manager started
+2025-05-13 16:44:41,221 - nexus.core.hub.client_manager - INFO - Starting Client Manager
+2025-05-13 16:44:41,221 - nexus.core.hub.client_manager - INFO - Client Manager started
+2025-05-13 16:44:41,221 - nexus.core.ui.server - INFO - Starting UI Server
+2025-05-13 16:44:41,221 - nexus.core.ui.server - INFO - UI Server started (mock implementation)
+2025-05-13 16:44:41,222 - nexus.core.monitoring.metrics - INFO - Starting Metrics Manager
+2025-05-13 16:44:41,222 - nexus.core.monitoring.metrics - INFO - Metrics Manager started
+2025-05-13 16:44:41,222 - nexus.core.monitoring.health - INFO - Starting Health Manager
+2025-05-13 16:44:41,222 - nexus.core.monitoring.health - INFO - Health Manager started
+2025-05-13 16:44:41,223 - nexus.core.hub.manager - INFO - Hub Manager started on localhost:8000
+2025-05-13 16:44:41,226 - nexus.api.server - INFO - API server initialized
+2025-05-13 16:44:41,232 - nexus.core.monitoring.health - INFO - Overall health status: degraded
+2025-05-13 16:44:41,241 - __main__ - ERROR - Error in main: [Errno 10048] error while attempting to bind on address ('::1', 8000, 0, 0): only one usage of each socket address (protocol/network address/port) is normally permitted
+Traceback (most recent call last):
+  File "D:\mcp\nexus\src\nexus\main.py", line 68, in main
+    await api_server.start()
+  File "D:\mcp\nexus\src\nexus\api\server.py", line 202, in start
+    await self.site.start()
+  File "D:\Python311\Lib\site-packages\aiohttp\web_runner.py", line 119, in start
+    self._server = await loop.create_server(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python311\Lib\asyncio\base_events.py", line 1536, in create_server
+    raise OSError(err.errno, msg) from None
+OSError: [Errno 10048] error while attempting to bind on address ('::1', 8000, 0, 0): only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-05-13 16:44:41,249 - nexus.api.server - INFO - API server stopped
+2025-05-13 16:44:41,249 - nexus.core.hub.manager - INFO - Stopping Hub Manager
+2025-05-13 16:44:41,249 - nexus.core.hub.server_manager - INFO - Stopping all servers
+2025-05-13 16:44:41,249 - nexus.core.hub.client_manager - INFO - Stopping Client Manager
+2025-05-13 16:44:41,250 - nexus.core.hub.client_manager - INFO - Client Manager stopped
+2025-05-13 16:44:41,250 - nexus.core.ui.server - INFO - Stopping UI Server
+2025-05-13 16:44:41,250 - nexus.core.ui.server - INFO - UI Server stopped (mock implementation)
+2025-05-13 16:44:41,250 - nexus.core.hub.manager - DEBUG - Metrics update task cancelled
+2025-05-13 16:44:41,251 - nexus.core.monitoring.metrics - INFO - Stopping Metrics Manager
+2025-05-13 16:44:41,251 - nexus.core.monitoring.metrics - DEBUG - Metrics export task cancelled
+2025-05-13 16:44:41,251 - nexus.core.monitoring.metrics - INFO - Metrics Manager stopped
+2025-05-13 16:44:41,251 - nexus.core.monitoring.health - INFO - Stopping Health Manager
+2025-05-13 16:44:41,252 - nexus.core.monitoring.health - DEBUG - Health check task cancelled
+2025-05-13 16:44:41,252 - nexus.core.monitoring.health - INFO - Health Manager stopped
+2025-05-13 16:44:41,252 - nexus.core.hub.server_manager - INFO - Stopping Server Manager
+2025-05-13 16:44:41,252 - nexus.core.hub.server_manager - INFO - Stopping all servers
+2025-05-13 16:44:41,253 - nexus.core.hub.server_manager - INFO - Server Manager stopped
+2025-05-13 16:44:41,253 - nexus.core.hub.manager - INFO - Hub Manager stopped
+2025-05-13 16:44:41,253 - __main__ - INFO - Nexus MCP Hub stopped
+2025-05-13 16:45:29,325 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:46:29,341 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:47:29,354 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:48:29,373 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:49:29,389 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:50:29,411 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:51:29,425 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:52:21,408 - aiohttp.access - INFO - ::1 [13/May/2025:15:52:21 -0800] "GET / HTTP/1.1" 401 205 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.5737"
+2025-05-13 16:52:23,430 - aiohttp.access - INFO - ::1 [13/May/2025:15:52:23 -0800] "GET / HTTP/1.1" 401 205 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.5737"
+2025-05-13 16:52:25,448 - aiohttp.access - INFO - ::1 [13/May/2025:15:52:25 -0800] "GET / HTTP/1.1" 401 205 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.5737"
+2025-05-13 16:52:26,596 - __main__ - DEBUG - Debug logging enabled
+2025-05-13 16:52:26,597 - __main__ - INFO - Starting Nexus MCP Hub
+2025-05-13 16:52:26,597 - nexus.core.hub.server_manager - INFO - Server Manager initialized
+2025-05-13 16:52:26,597 - nexus.core.hub.client_manager - INFO - Client Manager initialized
+2025-05-13 16:52:26,597 - nexus.core.hub.registry - INFO - Server Registry initialized
+2025-05-13 16:52:26,598 - nexus.core.router.router - DEBUG - Added route: ALL_CLIENTS -> HUB
+2025-05-13 16:52:26,598 - nexus.core.router.router - DEBUG - Added route: HUB -> ALL_CLIENTS (notifications/*)
+2025-05-13 16:52:26,598 - nexus.core.router.router - INFO - Message Router initialized
+2025-05-13 16:52:26,598 - nexus.core.security.auth - WARNING - Users file not found: users.json
+2025-05-13 16:52:26,599 - nexus.core.security.auth - WARNING - Tokens file not found: tokens.json
+2025-05-13 16:52:26,599 - nexus.core.security.acl - WARNING - Roles file not found: roles.json
+2025-05-13 16:52:26,599 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_uptime
+2025-05-13 16:52:26,599 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_server_count
+2025-05-13 16:52:26,600 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_client_count
+2025-05-13 16:52:26,600 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_mcp_server_count
+2025-05-13 16:52:26,600 - nexus.core.monitoring.metrics - DEBUG - Registered metric: hub_mcp_client_count
+2025-05-13 16:52:26,600 - nexus.core.monitoring.metrics - DEBUG - Registered metric: message_count
+2025-05-13 16:52:26,601 - nexus.core.monitoring.metrics - DEBUG - Registered metric: message_error_count
+2025-05-13 16:52:26,601 - nexus.core.monitoring.metrics - DEBUG - Registered metric: message_processing_time
+2025-05-13 16:52:26,601 - nexus.core.monitoring.metrics - DEBUG - Registered metric: server_start_count
+2025-05-13 16:52:26,601 - nexus.core.monitoring.metrics - DEBUG - Registered metric: server_stop_count
+2025-05-13 16:52:26,601 - nexus.core.monitoring.metrics - DEBUG - Registered metric: server_restart_count
+2025-05-13 16:52:26,602 - nexus.core.monitoring.metrics - DEBUG - Registered metric: client_connect_count
+2025-05-13 16:52:26,602 - nexus.core.monitoring.metrics - DEBUG - Registered metric: client_disconnect_count
+2025-05-13 16:52:26,602 - nexus.core.monitoring.metrics - DEBUG - Registered metric: auth_success_count
+2025-05-13 16:52:26,602 - nexus.core.monitoring.metrics - DEBUG - Registered metric: auth_failure_count
+2025-05-13 16:52:26,602 - nexus.core.monitoring.metrics - DEBUG - Registered metric: api_request_count
+2025-05-13 16:52:26,603 - nexus.core.monitoring.metrics - DEBUG - Registered metric: api_error_count
+2025-05-13 16:52:26,603 - nexus.core.monitoring.metrics - DEBUG - Registered metric: api_request_time
+2025-05-13 16:52:26,603 - nexus.core.monitoring.metrics - INFO - Metrics Manager initialized
+2025-05-13 16:52:26,603 - nexus.core.monitoring.health - INFO - Health Manager initialized
+2025-05-13 16:52:26,603 - nexus.core.hub.registry - INFO - Registry file not found: D:\mcp\nexus\src\nexus\core\../../../config/registry.json
+2025-05-13 16:52:26,604 - nexus.core.hub.manager - DEBUG - Hub configuration loaded: host=localhost, port=8000
+2025-05-13 16:52:26,604 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.SERVER
+2025-05-13 16:52:26,604 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.CLIENT
+2025-05-13 16:52:26,604 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.HUB
+2025-05-13 16:52:26,604 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.ALL_SERVERS
+2025-05-13 16:52:26,605 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.ALL_CLIENTS
+2025-05-13 16:52:26,605 - nexus.core.router.router - DEBUG - Registered message handler for route type: RouteType.CAPABILITY
+2025-05-13 16:52:26,605 - nexus.core.monitoring.health - DEBUG - Registered health check: hub_status
+2025-05-13 16:52:26,605 - nexus.core.monitoring.health - DEBUG - Registered health check: server_manager_status
+2025-05-13 16:52:26,605 - nexus.core.monitoring.health - DEBUG - Registered health check: client_manager_status
+2025-05-13 16:52:26,606 - nexus.core.monitoring.health - DEBUG - Registered health check: registry_status
+2025-05-13 16:52:26,606 - nexus.core.hub.manager - INFO - Hub Manager initialized
+2025-05-13 16:52:26,606 - nexus.core.hub.manager - INFO - Starting Hub Manager
+2025-05-13 16:52:26,607 - nexus.core.hub.registry - INFO - Registry file not found: D:\mcp\nexus\src\nexus\core\../../../config/registry.json
+2025-05-13 16:52:26,607 - nexus.core.hub.server_manager - INFO - Starting Server Manager
+2025-05-13 16:52:26,608 - nexus.core.hub.server_manager - INFO - Server Manager started
+2025-05-13 16:52:26,608 - nexus.core.hub.client_manager - INFO - Starting Client Manager
+2025-05-13 16:52:26,608 - nexus.core.hub.client_manager - INFO - Client Manager started
+2025-05-13 16:52:26,608 - nexus.core.ui.server - INFO - Starting UI Server
+2025-05-13 16:52:26,609 - nexus.core.ui.server - INFO - UI Server started (mock implementation)
+2025-05-13 16:52:26,609 - nexus.core.monitoring.metrics - INFO - Starting Metrics Manager
+2025-05-13 16:52:26,609 - nexus.core.monitoring.metrics - INFO - Metrics Manager started
+2025-05-13 16:52:26,609 - nexus.core.monitoring.health - INFO - Starting Health Manager
+2025-05-13 16:52:26,610 - nexus.core.monitoring.health - INFO - Health Manager started
+2025-05-13 16:52:26,610 - nexus.core.hub.manager - INFO - Hub Manager started on localhost:8000
+2025-05-13 16:52:26,614 - nexus.api.server - INFO - API server initialized
+2025-05-13 16:52:26,616 - nexus.core.monitoring.health - INFO - Overall health status: degraded
+2025-05-13 16:52:26,622 - __main__ - ERROR - Error in main: [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+Traceback (most recent call last):
+  File "D:\mcp\nexus\src\nexus\main.py", line 68, in main
+    await api_server.start()
+  File "D:\mcp\nexus\src\nexus\api\server.py", line 202, in start
+    await self.site.start()
+  File "D:\Python311\Lib\site-packages\aiohttp\web_runner.py", line 119, in start
+    self._server = await loop.create_server(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python311\Lib\asyncio\base_events.py", line 1536, in create_server
+    raise OSError(err.errno, msg) from None
+OSError: [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-05-13 16:52:26,626 - nexus.api.server - INFO - API server stopped
+2025-05-13 16:52:26,626 - nexus.core.hub.manager - INFO - Stopping Hub Manager
+2025-05-13 16:52:26,626 - nexus.core.hub.server_manager - INFO - Stopping all servers
+2025-05-13 16:52:26,627 - nexus.core.hub.client_manager - INFO - Stopping Client Manager
+2025-05-13 16:52:26,627 - nexus.core.hub.client_manager - INFO - Client Manager stopped
+2025-05-13 16:52:26,627 - nexus.core.ui.server - INFO - Stopping UI Server
+2025-05-13 16:52:26,627 - nexus.core.ui.server - INFO - UI Server stopped (mock implementation)
+2025-05-13 16:52:26,628 - nexus.core.hub.manager - DEBUG - Metrics update task cancelled
+2025-05-13 16:52:26,628 - nexus.core.monitoring.metrics - INFO - Stopping Metrics Manager
+2025-05-13 16:52:26,628 - nexus.core.monitoring.metrics - DEBUG - Metrics export task cancelled
+2025-05-13 16:52:26,628 - nexus.core.monitoring.metrics - INFO - Metrics Manager stopped
+2025-05-13 16:52:26,629 - nexus.core.monitoring.health - INFO - Stopping Health Manager
+2025-05-13 16:52:26,629 - nexus.core.monitoring.health - DEBUG - Health check task cancelled
+2025-05-13 16:52:26,629 - nexus.core.monitoring.health - INFO - Health Manager stopped
+2025-05-13 16:52:26,629 - nexus.core.hub.server_manager - INFO - Stopping Server Manager
+2025-05-13 16:52:26,630 - nexus.core.hub.server_manager - INFO - Stopping all servers
+2025-05-13 16:52:26,630 - nexus.core.hub.server_manager - INFO - Server Manager stopped
+2025-05-13 16:52:26,630 - nexus.core.hub.manager - INFO - Hub Manager stopped
+2025-05-13 16:52:26,631 - __main__ - INFO - Nexus MCP Hub stopped
+2025-05-13 16:52:29,430 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:52:43,099 - aiohttp.access - INFO - ::1 [13/May/2025:15:52:43 -0800] "POST /api/servers/register HTTP/1.1" 401 205 "-" "axios/1.9.0"
+2025-05-13 16:52:44,239 - aiohttp.access - INFO - ::1 [13/May/2025:15:52:44 -0800] "POST /api/servers/register HTTP/1.1" 401 205 "-" "axios/1.9.0"
+2025-05-13 16:52:45,316 - aiohttp.access - INFO - ::1 [13/May/2025:15:52:45 -0800] "POST /api/servers/register HTTP/1.1" 401 205 "-" "axios/1.9.0"
+2025-05-13 16:52:46,399 - aiohttp.access - INFO - ::1 [13/May/2025:15:52:46 -0800] "POST /api/servers/register HTTP/1.1" 401 205 "-" "axios/1.9.0"
+2025-05-13 16:52:57,882 - aiohttp.access - INFO - ::1 [13/May/2025:15:52:57 -0800] "GET / HTTP/1.1" 401 205 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.5737"
+2025-05-13 16:53:29,444 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:54:29,456 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:55:29,445 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:56:29,446 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:57:29,460 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:58:29,473 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 16:59:29,482 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:00:29,491 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:01:29,510 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:02:29,534 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:03:29,541 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:04:29,556 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:05:29,562 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:06:29,621 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:07:29,631 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:08:29,647 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:09:29,669 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:10:29,685 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:11:29,678 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:12:29,703 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:13:29,697 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:14:29,698 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:15:29,698 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:16:29,707 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:17:29,722 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:18:29,727 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:19:29,742 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:20:29,754 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:21:29,757 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:22:29,779 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:23:29,796 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:24:29,797 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:25:29,810 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:26:29,824 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:27:29,843 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:28:29,845 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:29:29,859 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:30:29,864 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:31:29,929 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:32:29,940 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:33:29,950 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:34:29,955 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:35:29,943 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:36:29,952 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:37:29,966 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:38:29,979 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:39:29,994 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:40:29,997 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:41:30,007 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:42:30,013 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:43:30,014 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:44:30,023 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:45:30,038 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:46:30,062 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:47:30,071 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:48:30,084 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:49:30,097 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:50:30,085 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:51:30,106 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:52:30,130 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:53:30,159 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:54:30,169 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:55:30,177 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:56:30,207 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:57:30,200 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:58:30,202 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 17:59:30,198 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:00:30,197 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:01:30,215 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:02:30,218 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:03:30,237 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:04:30,233 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:05:30,238 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:06:30,237 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:07:30,244 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:08:30,261 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:09:30,256 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:10:30,285 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:11:30,362 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:12:30,372 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:13:30,386 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:14:30,385 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:15:30,401 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:16:30,397 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:17:30,398 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:18:30,383 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:19:30,382 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:20:30,400 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:21:30,406 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:22:30,420 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:23:30,438 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:24:30,463 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:25:30,543 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:26:30,560 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:27:30,557 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:28:30,570 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:29:30,591 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:30:30,598 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:31:30,623 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:32:30,640 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:33:30,635 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:34:30,652 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:35:30,652 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:36:30,629 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:37:30,643 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:38:30,653 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:39:30,666 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:40:30,680 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:41:30,697 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:42:30,699 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:43:30,699 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:44:30,686 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:45:30,703 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:46:30,696 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:47:30,720 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:48:30,718 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:49:30,716 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:50:30,735 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:51:30,738 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:52:30,741 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:53:30,756 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:54:30,759 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:55:30,778 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:56:30,817 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:57:30,816 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:58:30,827 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 18:59:30,820 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:00:30,827 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:01:30,828 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:02:30,831 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:03:30,828 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:04:30,874 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:05:30,869 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:06:30,890 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:07:30,885 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:08:30,906 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:09:30,913 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:10:30,941 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:11:30,954 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:12:30,961 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:13:30,961 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:14:30,980 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:15:30,988 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:16:30,997 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:17:31,014 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:18:31,031 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:19:31,022 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:20:31,040 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:21:31,052 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:22:31,070 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:23:31,096 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:24:31,110 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:25:31,120 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:26:31,121 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:27:31,160 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:28:31,136 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:29:31,184 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:30:31,203 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:31:31,185 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:32:31,200 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:33:31,199 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:34:31,214 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:35:31,218 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:36:31,231 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:37:31,242 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:38:31,266 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:39:31,276 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:40:31,296 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:41:31,304 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:42:31,319 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:43:31,322 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:44:31,340 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:45:31,362 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:46:31,366 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:47:31,392 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:48:31,409 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:49:31,412 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:50:31,439 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:51:31,456 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:52:31,459 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:53:31,466 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:54:31,472 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:55:31,491 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:56:31,506 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:57:31,523 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:58:31,541 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 19:59:31,546 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:00:31,546 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:01:31,545 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:02:31,553 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:03:31,568 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:04:31,576 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:05:31,589 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:06:31,607 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:07:31,625 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:08:31,634 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:09:31,650 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:10:31,674 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:11:31,685 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:12:31,699 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:13:31,716 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:14:31,723 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:15:31,738 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:16:31,746 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:17:31,766 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:18:31,769 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:19:31,770 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:20:31,777 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:21:31,788 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:22:31,807 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:23:31,821 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:24:31,832 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:25:31,819 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:26:31,822 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:27:31,833 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:28:31,857 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:29:31,859 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:30:31,872 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:31:31,880 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:32:31,900 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:33:31,915 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:34:31,936 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:35:31,935 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:36:31,949 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:37:31,965 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:38:31,968 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:39:31,958 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:40:31,984 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:41:31,976 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:42:31,983 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:43:31,999 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:44:32,016 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:45:32,024 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:46:32,044 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:47:32,066 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:48:32,075 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:49:32,091 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:50:32,100 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:51:32,115 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:52:32,128 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:53:32,140 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:54:32,155 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:55:32,189 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:56:32,195 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:57:32,222 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:58:32,220 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 20:59:32,223 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:00:32,229 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:01:32,250 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:02:32,255 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:03:32,278 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:04:32,296 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:05:32,301 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:06:32,308 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:07:32,318 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:08:32,336 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:09:32,363 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:10:32,360 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:11:32,374 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:12:32,394 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:13:32,390 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:14:32,404 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:15:32,408 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:16:32,405 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:17:32,402 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:18:32,406 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:19:32,403 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:20:32,393 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:21:32,400 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:22:32,401 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:23:32,404 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:24:32,398 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:25:32,398 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:26:32,424 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:27:32,434 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:28:32,438 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:29:32,453 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:30:32,462 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:31:32,463 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:32:32,488 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:33:32,474 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:34:32,497 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:35:32,497 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:36:32,519 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:37:32,514 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:38:32,527 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:39:32,527 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:40:32,531 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:41:32,545 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:42:32,552 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:43:32,576 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:44:32,583 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:45:32,591 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:46:32,606 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:47:32,621 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:48:32,621 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:49:32,617 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:50:32,621 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:51:32,642 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:52:32,636 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:53:32,633 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:54:32,643 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:55:32,651 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:56:32,669 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:57:32,663 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:58:32,686 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 21:59:32,695 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:00:32,722 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:01:32,734 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:02:32,748 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:03:32,765 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:04:32,774 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:05:32,775 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:06:32,785 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:07:32,772 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:08:32,773 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:09:32,791 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:10:32,802 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:11:32,822 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:12:32,837 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:13:32,856 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:14:32,868 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:15:32,893 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:16:32,886 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:17:32,893 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:18:32,937 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:19:33,023 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:20:33,037 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:21:33,063 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:22:33,079 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:23:33,088 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:24:33,089 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:25:33,097 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:26:33,118 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:27:33,195 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:28:33,250 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:29:33,334 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:30:33,340 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:31:33,336 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:32:33,338 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:33:33,344 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:34:33,350 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:35:33,371 - nexus.core.monitoring.health - INFO - Overall health status: healthy
+2025-05-13 22:36:33,385 - nexus.core.monitoring.health - INFO - Overall health status: healthy

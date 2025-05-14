@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus MCP Hub - Admin Dashboard</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="logo">
+                <h1>Nexus MCP Hub</h1>
+            </div>
+            <div class="user-info" v-if="user">
+                <span>{{ user.username }}</span>
+                <button @click="logout" class="btn-logout">Logout</button>
+            </div>
+        </header>
+        
+        <div class="container" v-if="isAuthenticated">
+            <nav class="sidebar">
+                <ul>
+                    <li :class="{ active: currentPage === 'dashboard' }">
+                        <a href="#/dashboard" @click="currentPage = 'dashboard'">
+                            <i class="fas fa-tachometer-alt"></i> Dashboard
+                        </a>
+                    </li>
+                    <li :class="{ active: currentPage === 'servers' }">
+                        <a href="#/servers" @click="currentPage = 'servers'">
+                            <i class="fas fa-server"></i> Servers
+                        </a>
+                    </li>
+                    <li :class="{ active: currentPage === 'clients' }">
+                        <a href="#/clients" @click="currentPage = 'clients'">
+                            <i class="fas fa-users"></i> Clients
+                        </a>
+                    </li>
+                    <li :class="{ active: currentPage === 'routes' }">
+                        <a href="#/routes" @click="currentPage = 'routes'">
+                            <i class="fas fa-route"></i> Routes
+                        </a>
+                    </li>
+                    <li :class="{ active: currentPage === 'users' }" v-if="isAdmin">
+                        <a href="#/users" @click="currentPage = 'users'">
+                            <i class="fas fa-user-shield"></i> Users
+                        </a>
+                    </li>
+                    <li :class="{ active: currentPage === 'settings' }">
+                        <a href="#/settings" @click="currentPage = 'settings'">
+                            <i class="fas fa-cog"></i> Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <main class="content">
+                <!-- Dashboard Page -->
+                <div v-if="currentPage === 'dashboard'" class="page dashboard-page">
+                    <h2>Dashboard</h2>
+                    <div class="dashboard-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-server"></i></div>
+                            <div class="stat-info">
+                                <h3>Servers</h3>
+                                <p>{{ stats.server_count || 0 }}</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-users"></i></div>
+                            <div class="stat-info">
+                                <h3>Clients</h3>
+                                <p>{{ stats.client_count || 0 }}</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-plug"></i></div>
+                            <div class="stat-info">
+                                <h3>MCP Servers</h3>
+                                <p>{{ stats.mcp_server_count || 0 }}</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-desktop"></i></div>
+                            <div class="stat-info">
+                                <h3>MCP Clients</h3>
+                                <p>{{ stats.mcp_client_count || 0 }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-charts">
+                        <div class="chart-container">
+                            <h3>Server Status</h3>
+                            <div class="chart">
+                                <!-- Chart will be rendered here -->
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <h3>Client Connections</h3>
+                            <div class="chart">
+                                <!-- Chart will be rendered here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Servers Page -->
+                <div v-if="currentPage === 'servers'" class="page servers-page">
+                    <h2>Servers</h2>
+                    <div class="action-bar">
+                        <button class="btn-primary" @click="showAddServerModal = true">
+                            <i class="fas fa-plus"></i> Add Server
+                        </button>
+                    </div>
+                    
+                    <div class="server-list">
+                        <div v-for="server in servers" :key="server.id" class="server-card">
+                            <div class="server-header">
+                                <h3>{{ server.name || server.id }}</h3>
+                                <div class="server-status" :class="server.running ? 'status-running' : 'status-stopped'">
+                                    {{ server.running ? 'Running' : 'Stopped' }}
+                                </div>
+                            </div>
+                            <div class="server-info">
+                                <p><strong>ID:</strong> {{ server.id }}</p>
+                                <p><strong>MCP Connected:</strong> {{ server.mcp_connected ? 'Yes' : 'No' }}</p>
+                                <p><strong>MCP Initialized:</strong> {{ server.mcp_initialized ? 'Yes' : 'No' }}</p>
+                            </div>
+                            <div class="server-actions">
+                                <button v-if="!server.running" class="btn-success" @click="startServer(server.id)">
+                                    <i class="fas fa-play"></i> Start
+                                </button>
+                                <button v-if="server.running" class="btn-danger" @click="stopServer(server.id)">
+                                    <i class="fas fa-stop"></i> Stop
+                                </button>
+                                <button v-if="server.running" class="btn-warning" @click="restartServer(server.id)">
+                                    <i class="fas fa-sync"></i> Restart
+                                </button>
+                                <button class="btn-info" @click="viewServerDetails(server.id)">
+                                    <i class="fas fa-info-circle"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other pages will be implemented similarly -->
+            </main>
+        </div>
+        
+        <!-- Login Page -->
+        <div class="login-container" v-if="!isAuthenticated">
+            <div class="login-form">
+                <h2>Login to Nexus MCP Hub</h2>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" v-model="loginForm.username" placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" v-model="loginForm.password" placeholder="Enter your password">
+                </div>
+                <div class="form-actions">
+                    <button class="btn-primary" @click="login">Login</button>
+                </div>
+                <div class="login-error" v-if="loginError">
+                    {{ loginError }}
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modals -->
+        <div class="modal" v-if="showAddServerModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Add Server</h3>
+                    <button class="btn-close" @click="showAddServerModal = false">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="server-id">Server ID</label>
+                        <input type="text" id="server-id" v-model="newServer.id" placeholder="Enter server ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="server-name">Server Name</label>
+                        <input type="text" id="server-name" v-model="newServer.name" placeholder="Enter server name">
+                    </div>
+                    <div class="form-group">
+                        <label for="server-command">Command</label>
+                        <input type="text" id="server-command" v-model="newServer.command" placeholder="Enter server command">
+                    </div>
+                    <div class="form-group">
+                        <label for="server-args">Arguments</label>
+                        <input type="text" id="server-args" v-model="newServer.args" placeholder="Enter command arguments">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" v-model="newServer.auto_start"> Auto Start
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" v-model="newServer.auto_restart"> Auto Restart
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" @click="showAddServerModal = false">Cancel</button>
+                    <button class="btn-primary" @click="addServer">Add Server</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

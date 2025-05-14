@@ -1,0 +1,10 @@
+This is a placeholder for the Agent Components diagram.
+
+The diagram should illustrate:
+1. Core Model - The foundation AI model (e.g., Claude, GPT-4)
+2. Tool Router - Directs tool calls to appropriate MCP servers
+3. Context Manager - Maintains state across interactions
+4. Task Planner - Breaks down complex tasks into steps
+5. Memory System - Stores and retrieves relevant information
+
+The diagram should show how these components interact with each other and with the MCP servers.

@@ -1,0 +1,159 @@
+{
+  "name": "augment-nexus-client",
+  "displayName": "Augment Nexus Client",
+  "description": "VS Code extension for connecting Augment to Nexus MCP Hub",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:augment-nexus-client.connect",
+    "onCommand:augment-nexus-client.disconnect",
+    "onCommand:augment-nexus-client.augmentWithNexus",
+    "onView:augmentNexusServers",
+    "onView:augmentNexusTools"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "augment-nexus-client.connect",
+        "title": "Connect to Nexus Hub"
+      },
+      {
+        "command": "augment-nexus-client.disconnect",
+        "title": "Disconnect from Nexus Hub"
+      },
+      {
+        "command": "augment-nexus-client.callServer",
+        "title": "Call Nexus Server"
+      },
+      {
+        "command": "augment-nexus-client.callTool",
+        "title": "Call Nexus Tool"
+      },
+      {
+        "command": "augment-nexus-client.refreshServers",
+        "title": "Refresh Nexus Servers",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "augment-nexus-client.augmentWithNexus",
+        "title": "Augment with Nexus"
+      },
+      {
+        "command": "augment-nexus-client.augmentSelection",
+        "title": "Augment Selection with Nexus"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "augment-nexus-explorer",
+          "title": "Augment Nexus",
+          "icon": "resources/nexus-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "augment-nexus-explorer": [
+        {
+          "id": "augmentNexusServers",
+          "name": "Nexus Servers"
+        },
+        {
+          "id": "augmentNexusTools",
+          "name": "Available Tools"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "augmentNexusServers",
+        "contents": "No Nexus Hub connected.\n[Connect to Nexus Hub](command:augment-nexus-client.connect)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "augment-nexus-client.refreshServers",
+          "when": "view == augmentNexusServers",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "augment-nexus-client.callServer",
+          "when": "view == augmentNexusServers && viewItem == server",
+          "group": "inline"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "augment-nexus-client.augmentSelection",
+          "when": "editorHasSelection",
+          "group": "1_modification"
+        },
+        {
+          "command": "augment-nexus-client.augmentWithNexus",
+          "when": "editorTextFocus",
+          "group": "1_modification"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Augment Nexus Client",
+      "properties": {
+        "augmentNexusClient.hubUrl": {
+          "type": "string",
+          "default": "http://localhost:8000",
+          "description": "URL of the Nexus MCP Hub"
+        },
+        "augmentNexusClient.username": {
+          "type": "string",
+          "default": "",
+          "description": "Username for Nexus Hub authentication"
+        },
+        "augmentNexusClient.token": {
+          "type": "string",
+          "default": "",
+          "description": "Authentication token for Nexus Hub"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "test-compile": "tsc -p ./",
+    "test-watch": "tsc -watch -p ./",
+    "pretest": "npm run test-compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "14.x",
+    "@types/vscode": "^1.60.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "eslint": "^7.27.0",
+    "glob": "^7.1.7",
+    "mocha": "^8.4.0",
+    "typescript": "^4.3.2",
+    "vscode-test": "^1.5.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "ts-loader": "^9.2.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "uuid": "^8.3.2"
+  }
+}

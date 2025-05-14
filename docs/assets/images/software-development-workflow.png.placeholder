@@ -1,0 +1,10 @@
+This is a placeholder for the Software Development Workflow diagram.
+
+The diagram should illustrate:
+1. Project Setup - Create a new project or connect to an existing one
+2. Code Generation - Describe features or components to implement
+3. Code Review - Submit code for review and implement improvements
+4. Testing - Generate test cases and execute tests
+5. Documentation - Generate documentation for code
+
+The diagram should show how the Nexus MCP Hub and its agents (particularly CodeAssistant) are involved in each step of the software development process.

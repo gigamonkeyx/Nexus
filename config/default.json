@@ -1,0 +1,53 @@
+{
+    "hub": {
+        "name": "Nexus MCP Hub",
+        "host": "localhost",
+        "port": 8000,
+        "debug": false,
+        "log_level": "info",
+        "data_dir": "D:\\mcp\\nexus\\src\\nexus\\core\\../../../data",
+        "registry_file": "D:\\mcp\\nexus\\src\\nexus\\core\\../../../config/registry.json",
+        "process_registry_file": "D:\\mcp\\nexus\\src\\nexus\\core\\../../../config/process_registry.json",
+        "admin_username": "admin",
+        "admin_password": "admin"
+    },
+    "servers": {
+        "default_timeout": 30,
+        "auto_start": true,
+        "auto_restart": true,
+        "max_retries": 3,
+        "retry_delay": 5
+    },
+    "integrations": {
+        "github": {
+            "enabled": true,
+            "default_repo": "https://github.com/modelcontextprotocol/servers"
+        },
+        "supabase": {
+            "enabled": false,
+            "url": "",
+            "key": ""
+        },
+        "rag": {
+            "enabled": true,
+            "storage_dir": "D:\\mcp\\nexus\\src\\nexus\\core\\../../../data/rag"
+        },
+        "comfyui": {
+            "enabled": true,
+            "host": "localhost",
+            "port": 8188
+        },
+        "playwright": {
+            "enabled": true,
+            "browser": "chromium"
+        }
+    },
+    "security": {
+        "enable_auth": true,
+        "jwt_secret": "",
+        "token_expiry": 86400,
+        "cors_origins": [
+            "http://localhost:3000"
+        ]
+    }
+}

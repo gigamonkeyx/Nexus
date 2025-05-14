@@ -1,0 +1,22 @@
+{
+    "hub": {
+        "name": "Nexus MCP Hub",
+        "version": "1.0.0",
+        "host": "localhost",
+        "port": 8000,
+        "log_level": "info",
+        "registry_file": "data/registry.json",
+        "process_registry_file": "data/processes.json"
+    },
+    "servers": {
+        "auto_start": true,
+        "auto_restart": true,
+        "default_timeout": 30,
+        "max_retries": 3,
+        "retry_delay": 5
+    },
+    "security": {
+        "cors_origins": ["*"],
+        "require_auth": false
+    }
+}

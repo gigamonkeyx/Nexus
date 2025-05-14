@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">Agent Components</text>
+  
+  <!-- Agent Container -->
+  <rect x="100" y="100" width="600" height="400" rx="15" ry="15" fill="#f5f5f5" stroke="#ddd" stroke-width="2"/>
+  <text x="400" y="130" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">Agent</text>
+  
+  <!-- Core Model -->
+  <rect x="150" y="160" width="200" height="100" rx="10" ry="10" fill="#4285f4" opacity="0.8"/>
+  <text x="250" y="210" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Core Model</text>
+  <text x="250" y="235" font-family="Arial" font-size="12" text-anchor="middle" fill="white">Foundation AI Model</text>
+  <text x="250" y="255" font-family="Arial" font-size="12" text-anchor="middle" fill="white">(Claude, GPT-4, etc.)</text>
+  
+  <!-- Tool Router -->
+  <rect x="450" y="160" width="200" height="100" rx="10" ry="10" fill="#0f9d58" opacity="0.8"/>
+  <text x="550" y="210" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Tool Router</text>
+  <text x="550" y="235" font-family="Arial" font-size="12" text-anchor="middle" fill="white">Directs tool calls to</text>
+  <text x="550" y="255" font-family="Arial" font-size="12" text-anchor="middle" fill="white">appropriate MCP servers</text>
+  
+  <!-- Context Manager -->
+  <rect x="150" y="280" width="200" height="100" rx="10" ry="10" fill="#db4437" opacity="0.8"/>
+  <text x="250" y="330" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Context Manager</text>
+  <text x="250" y="355" font-family="Arial" font-size="12" text-anchor="middle" fill="white">Maintains state across</text>
+  <text x="250" y="375" font-family="Arial" font-size="12" text-anchor="middle" fill="white">interactions</text>
+  
+  <!-- Task Planner -->
+  <rect x="450" y="280" width="200" height="100" rx="10" ry="10" fill="#f4b400" opacity="0.8"/>
+  <text x="550" y="330" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Task Planner</text>
+  <text x="550" y="355" font-family="Arial" font-size="12" text-anchor="middle" fill="white">Breaks down complex</text>
+  <text x="550" y="375" font-family="Arial" font-size="12" text-anchor="middle" fill="white">tasks into steps</text>
+  
+  <!-- Memory System -->
+  <rect x="300" y="400" width="200" height="80" rx="10" ry="10" fill="#673ab7" opacity="0.8"/>
+  <text x="400" y="440" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Memory System</text>
+  <text x="400" y="465" font-family="Arial" font-size="12" text-anchor="middle" fill="white">Stores and retrieves information</text>
+  
+  <!-- Connections -->
+  <!-- Core Model to Tool Router -->
+  <path d="M 350 210 L 450 210" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Tool Router to Core Model -->
+  <path d="M 450 230 L 350 230" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Core Model to Context Manager -->
+  <path d="M 250 260 L 250 280" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Context Manager to Core Model -->
+  <path d="M 270 280 L 270 260" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Task Planner to Core Model -->
+  <path d="M 530 280 L 300 220" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Core Model to Task Planner -->
+  <path d="M 300 240 L 530 300" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Memory System to Context Manager -->
+  <path d="M 350 400 L 300 380" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Context Manager to Memory System -->
+  <path d="M 300 360 L 350 400" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Memory System to Task Planner -->
+  <path d="M 450 400 L 500 380" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Task Planner to Memory System -->
+  <path d="M 500 360 L 450 400" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- External Connections -->
+  <!-- Tool Router to External -->
+  <path d="M 650 210 L 700 210" stroke="#333" stroke-width="2" stroke-dasharray="5,5" fill="none" marker-end="url(#arrow)"/>
+  <text x="720" y="215" font-family="Arial" font-size="12" fill="#333">MCP Servers</text>
+  
+  <!-- External to Agent -->
+  <path d="M 50 210 L 100 210" stroke="#333" stroke-width="2" stroke-dasharray="5,5" fill="none" marker-end="url(#arrow)"/>
+  <text x="30" y="215" font-family="Arial" font-size="12" text-anchor="end" fill="#333">User Input</text>
+  
+  <!-- Agent to External -->
+  <path d="M 100 330 L 50 330" stroke="#333" stroke-width="2" stroke-dasharray="5,5" fill="none" marker-end="url(#arrow)"/>
+  <text x="30" y="335" font-family="Arial" font-size="12" text-anchor="end" fill="#333">Response</text>
+  
+  <!-- Arrow Marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Legend -->
+  <rect x="600" y="520" width="180" height="60" rx="5" ry="5" fill="white" stroke="#ccc"/>
+  <text x="620" y="540" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Components</text>
+  <circle cx="620" cy="560" r="5" fill="#4285f4"/>
+  <text x="630" y="565" font-family="Arial" font-size="12" fill="#333">Core Components</text>
+</svg>

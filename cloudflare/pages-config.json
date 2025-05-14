@@ -1,0 +1,17 @@
+{
+  "build": {
+    "command": "npm run build",
+    "output_directory": "build",
+    "root_directory": ""
+  },
+  "env": {
+    "production": {
+      "REACT_APP_API_BASE_URL": "https://docs-library.yourdomain.com",
+      "REACT_APP_API_KEY": "your-secret-api-key"
+    },
+    "preview": {
+      "REACT_APP_API_BASE_URL": "https://docs-library.yourdomain.com",
+      "REACT_APP_API_KEY": "your-secret-api-key"
+    }
+  }
+}

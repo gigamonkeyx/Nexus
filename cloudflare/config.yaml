@@ -1,0 +1,6 @@
+tunnel: 60730e8e-c212-40d5-bdca-b0e4e9bf724e
+credentials-file: ./credentials.json
+ingress:
+  - hostname: docs-library.yourdomain.com
+    service: http://localhost:8010
+  - service: http_status:404

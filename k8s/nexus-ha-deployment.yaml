@@ -1,0 +1,237 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nexus-config
+data:
+  nexus.json: |
+    {
+      "hub": {
+        "host": "0.0.0.0",
+        "port": 8000,
+        "registry_file": "/app/data/registry.json"
+      },
+      "servers": {
+        "auto_start": true,
+        "auto_restart": true
+      },
+      "security": {
+        "users_file": "/app/data/users.json",
+        "tokens_file": "/app/data/tokens.json",
+        "roles_file": "/app/data/roles.json",
+        "cors_origins": ["*"],
+        "basic_auth": {
+          "enabled": true
+        },
+        "token_auth": {
+          "enabled": true
+        }
+      },
+      "ui": {
+        "host": "0.0.0.0",
+        "port": 8080,
+        "static_dir": "src/nexus/ui/static"
+      },
+      "monitoring": {
+        "metrics": {
+          "export_interval": 60,
+          "update_interval": 10,
+          "export_file": "/app/data/metrics.json",
+          "prometheus": {
+            "enabled": true
+          }
+        },
+        "health": {
+          "check_interval": 30,
+          "export_file": "/app/data/health.json"
+        }
+      },
+      "logging": {
+        "level": "info",
+        "file": "/app/logs/nexus.log",
+        "json": {
+          "enabled": true,
+          "file": "/app/logs/nexus.json"
+        }
+      },
+      "high_availability": {
+        "enabled": true,
+        "mode": "active-passive",
+        "leader_election": {
+          "enabled": true,
+          "lease_duration": 15,
+          "renew_deadline": 10,
+          "retry_period": 2
+        }
+      }
+    }
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: nexus-mcp-hub
+  labels:
+    app: nexus-mcp-hub
+spec:
+  serviceName: "nexus-mcp-hub"
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nexus-mcp-hub
+  template:
+    metadata:
+      labels:
+        app: nexus-mcp-hub
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - nexus-mcp-hub
+              topologyKey: "kubernetes.io/hostname"
+      terminationGracePeriodSeconds: 60
+      containers:
+      - name: nexus-mcp-hub
+        image: nexusmcp/hub:latest
+        imagePullPolicy: IfNotPresent
+        args: ["--config", "/app/config/nexus.json", "--log-level", "INFO"]
+        ports:
+        - containerPort: 8000
+          name: api
+        - containerPort: 8080
+          name: ui
+        volumeMounts:
+        - name: config-volume
+          mountPath: /app/config
+        - name: data-volume
+          mountPath: /app/data
+        - name: logs-volume
+          mountPath: /app/logs
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "512Mi"
+          limits:
+            cpu: "1000m"
+            memory: "1Gi"
+        livenessProbe:
+          httpGet:
+            path: /api/monitoring/health
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /api/monitoring/health
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+      volumes:
+      - name: config-volume
+        configMap:
+          name: nexus-config
+  volumeClaimTemplates:
+  - metadata:
+      name: data-volume
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 1Gi
+  - metadata:
+      name: logs-volume
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 1Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nexus-mcp-hub
+  labels:
+    app: nexus-mcp-hub
+spec:
+  selector:
+    app: nexus-mcp-hub
+  ports:
+  - name: api
+    port: 8000
+    targetPort: 8000
+  - name: ui
+    port: 8080
+    targetPort: 8080
+  type: ClusterIP
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nexus-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  tls:
+  - hosts:
+    - nexus.example.com
+    secretName: nexus-tls
+  rules:
+  - host: nexus.example.com
+    http:
+      paths:
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: nexus-mcp-hub
+            port:
+              number: 8000
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: nexus-mcp-hub
+            port:
+              number: 8080
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: nexus-mcp-hub-pdb
+spec:
+  minAvailable: 2
+  selector:
+    matchLabels:
+      app: nexus-mcp-hub
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: nexus-mcp-hub-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: StatefulSet
+    name: nexus-mcp-hub
+  minReplicas: 3
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 80

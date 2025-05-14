@@ -1,0 +1,3 @@
+@echo off
+echo Starting Code Enhancement MCP Server...
+python code_enhancement_server.py

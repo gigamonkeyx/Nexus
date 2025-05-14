@@ -1,0 +1,36 @@
+{
+  "name": "nexus-agent-portal",
+  "build_command": "npm run build",
+  "build_directory": "build",
+  "root_directory": "agent-frontend-ui",
+  "routes": [
+    {
+      "pattern": "/api/*",
+      "service": "api-worker"
+    },
+    {
+      "pattern": "/*",
+      "service": "static"
+    }
+  ],
+  "environment_variables": {
+    "production": {
+      "REACT_APP_API_URL": "https://api.nexus-mcp.workers.dev",
+      "REACT_APP_WS_URL": "wss://api.nexus-mcp.workers.dev",
+      "REACT_APP_CF_ZONE_ID": "your-cloudflare-zone-id",
+      "REACT_APP_GITHUB_OWNER": "your-github-username",
+      "REACT_APP_GITHUB_REPO": "your-github-repo"
+    },
+    "preview": {
+      "REACT_APP_API_URL": "https://api.nexus-mcp.workers.dev",
+      "REACT_APP_WS_URL": "wss://api.nexus-mcp.workers.dev",
+      "REACT_APP_CF_ZONE_ID": "your-cloudflare-zone-id",
+      "REACT_APP_GITHUB_OWNER": "your-github-username",
+      "REACT_APP_GITHUB_REPO": "your-github-repo"
+    }
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "compatibility_date": "2023-06-01"
+}
