@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% seo %}
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      <p>{{ site.description }}</p>
+      
+      <nav class="main-nav">
+        <h2>Main Sections</h2>
+        <ul>
+          <li><a href="{{ '/architecture/system-overview.html' | relative_url }}">Architecture</a></li>
+          <li><a href="{{ '/mcp-servers/server-types.html' | relative_url }}">MCP Servers</a></li>
+          <li><a href="{{ '/agents/agent-types.html' | relative_url }}">Agents</a></li>
+          <li><a href="{{ '/api/reference.html' | relative_url }}">API</a></li>
+          <li><a href="{{ '/deployment/guide.html' | relative_url }}">Deployment</a></li>
+          <li><a href="{{ '/security/best-practices.html' | relative_url }}">Security</a></li>
+          <li><a href="{{ '/workflows/overview.html' | relative_url }}">Workflows</a></li>
+          <li><a href="{{ '/tutorials/creating-your-first-agent.html' | relative_url }}">Tutorials</a></li>
+          <li><a href="{{ '/troubleshooting/common-issues.html' | relative_url }}">Troubleshooting</a></li>
+        </ul>
+      </nav>
+      
+      {% if page.url != '/' %}
+      <p class="back-link"><a href="{{ '/' | relative_url }}">&larr; Back to Home</a></p>
+      {% endif %}
+    </header>
+    
+    <section>
+      <div class="content">
+        {% if page.title %}
+        <h1>{{ page.title }}</h1>
+        {% endif %}
+        
+        {{ content }}
+      </div>
+    </section>
+    
+    <footer>
+      <p>&copy; {{ site.time | date: '%Y' }} Nexus MCP Hub. All rights reserved.</p>
+    </footer>
+  </div>
+  
+  <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+</body>
+</html>

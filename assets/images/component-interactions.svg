@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">Component Interactions</text>
+  
+  <!-- Client Applications -->
+  <rect x="100" y="100" width="200" height="100" rx="10" ry="10" fill="#f4b400" opacity="0.8"/>
+  <text x="200" y="150" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Client Applications</text>
+  <text x="200" y="175" font-family="Arial" font-size="12" text-anchor="middle" fill="white">Web, VS Code, API Clients</text>
+  
+  <!-- Nexus Hub -->
+  <rect x="300" y="250" width="200" height="100" rx="10" ry="10" fill="#4285f4" opacity="0.8"/>
+  <text x="400" y="300" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Nexus Hub</text>
+  <text x="400" y="325" font-family="Arial" font-size="12" text-anchor="middle" fill="white">Central Management</text>
+  
+  <!-- MCP Servers -->
+  <rect x="500" y="100" width="200" height="100" rx="10" ry="10" fill="#0f9d58" opacity="0.8"/>
+  <text x="600" y="150" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">MCP Servers</text>
+  <text x="600" y="175" font-family="Arial" font-size="12" text-anchor="middle" fill="white">Specialized Capabilities</text>
+  
+  <!-- Agents -->
+  <rect x="300" y="400" width="200" height="100" rx="10" ry="10" fill="#db4437" opacity="0.8"/>
+  <text x="400" y="450" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Agents</text>
+  <text x="400" y="475" font-family="Arial" font-size="12" text-anchor="middle" fill="white">AI Assistants</text>
+  
+  <!-- Connections -->
+  <!-- Client to Hub -->
+  <path d="M 200 200 L 300 250" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="230" y="240" font-family="Arial" font-size="12" fill="#333">REST API</text>
+  <text x="230" y="255" font-family="Arial" font-size="12" fill="#333">WebSockets</text>
+  
+  <!-- Hub to Client -->
+  <path d="M 300 270 L 200 220" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Hub to MCP Servers -->
+  <path d="M 500 300 L 600 200" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="570" y="240" font-family="Arial" font-size="12" fill="#333">Model Context</text>
+  <text x="570" y="255" font-family="Arial" font-size="12" fill="#333">Protocol</text>
+  
+  <!-- MCP Servers to Hub -->
+  <path d="M 600 220 L 500 280" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Hub to Agents -->
+  <path d="M 400 350 L 400 400" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="420" y="380" font-family="Arial" font-size="12" fill="#333">Internal API</text>
+  
+  <!-- Agents to Hub -->
+  <path d="M 380 400 L 380 350" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Agents to MCP Servers -->
+  <path d="M 500 400 L 600 200" stroke="#333" stroke-width="2" fill="none" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <text x="570" y="300" font-family="Arial" font-size="12" fill="#333">Tool Calls</text>
+  
+  <!-- Database -->
+  <ellipse cx="150" y="400" rx="80" ry="40" fill="#673ab7" opacity="0.8"/>
+  <text x="150" y="400" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Database</text>
+  <text x="150" y="425" font-family="Arial" font-size="12" text-anchor="middle" fill="white">PostgreSQL</text>
+  
+  <!-- Hub to Database -->
+  <path d="M 300 320 L 200 380" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="230" y="360" font-family="Arial" font-size="12" fill="#333">Data Access</text>
+  
+  <!-- Database to Hub -->
+  <path d="M 200 360 L 300 300" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Message Queue -->
+  <ellipse cx="650" y="400" rx="80" ry="40" fill="#ff6d00" opacity="0.8"/>
+  <text x="650" y="400" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Message Queue</text>
+  <text x="650" y="425" font-family="Arial" font-size="12" text-anchor="middle" fill="white">Redis</text>
+  
+  <!-- Hub to Message Queue -->
+  <path d="M 500 320 L 600 380" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="570" y="360" font-family="Arial" font-size="12" fill="#333">Events</text>
+  
+  <!-- Message Queue to Hub -->
+  <path d="M 600 360 L 500 300" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Arrow Marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Interface Types -->
+  <rect x="600" y="520" width="180" height="60" rx="5" ry="5" fill="white" stroke="#ccc"/>
+  <text x="620" y="540" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Interfaces</text>
+  <line x1="620" y1="555" x2="640" y2="555" stroke="#333" stroke-width="2"/>
+  <text x="645" y="560" font-family="Arial" font-size="12" fill="#333">Direct</text>
+  <line x1="620" y1="575" x2="640" y2="575" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="645" y="580" font-family="Arial" font-size="12" fill="#333">Indirect</text>
+</svg>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">Agent Creation Workflow</text>
+  
+  <!-- Step 1: Define Purpose -->
+  <rect x="150" y="100" width="500" height="80" rx="10" ry="10" fill="#4285f4" opacity="0.8"/>
+  <text x="400" y="135" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">1. Define Purpose</text>
+  <text x="400" y="160" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Identify specific tasks, target users, and success criteria</text>
+  
+  <!-- Step 2: Select Model -->
+  <rect x="150" y="200" width="500" height="80" rx="10" ry="10" fill="#0f9d58" opacity="0.8"/>
+  <text x="400" y="235" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">2. Select Model</text>
+  <text x="400" y="260" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Choose foundation model and configure parameters</text>
+  
+  <!-- Step 3: Choose MCP Servers -->
+  <rect x="150" y="300" width="500" height="80" rx="10" ry="10" fill="#db4437" opacity="0.8"/>
+  <text x="400" y="335" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">3. Choose MCP Servers</text>
+  <text x="400" y="360" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Select servers based on required capabilities</text>
+  
+  <!-- Step 4: Configure Agent -->
+  <rect x="150" y="400" width="500" height="80" rx="10" ry="10" fill="#f4b400" opacity="0.8"/>
+  <text x="400" y="435" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">4. Configure Agent</text>
+  <text x="400" y="460" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Set name, description, type, capabilities, and parameters</text>
+  
+  <!-- Step 5: Test and Deploy -->
+  <rect x="150" y="500" width="500" height="80" rx="10" ry="10" fill="#673ab7" opacity="0.8"/>
+  <text x="400" y="535" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">5. Test and Deploy</text>
+  <text x="400" y="560" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Test with sample tasks and deploy for production use</text>
+  
+  <!-- Arrows -->
+  <path d="M 400 180 L 400 200" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 280 L 400 300" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 380 L 400 400" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 480 L 400 500" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Arrow Marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Side Notes -->
+  <!-- Define Purpose Notes -->
+  <rect x="670" y="100" width="120" height="80" rx="5" ry="5" fill="white" stroke="#ccc"/>
+  <text x="680" y="120" font-family="Arial" font-size="12" fill="#333">• Tasks</text>
+  <text x="680" y="140" font-family="Arial" font-size="12" fill="#333">• Target users</text>
+  <text x="680" y="160" font-family="Arial" font-size="12" fill="#333">• Success criteria</text>
+  
+  <!-- Select Model Notes -->
+  <rect x="670" y="200" width="120" height="80" rx="5" ry="5" fill="white" stroke="#ccc"/>
+  <text x="680" y="220" font-family="Arial" font-size="12" fill="#333">• Claude</text>
+  <text x="680" y="240" font-family="Arial" font-size="12" fill="#333">• GPT-4</text>
+  <text x="680" y="260" font-family="Arial" font-size="12" fill="#333">• Llama 3</text>
+  
+  <!-- Choose MCP Servers Notes -->
+  <rect x="670" y="300" width="120" height="80" rx="5" ry="5" fill="white" stroke="#ccc"/>
+  <text x="680" y="320" font-family="Arial" font-size="12" fill="#333">• Ollama MCP</text>
+  <text x="680" y="340" font-family="Arial" font-size="12" fill="#333">• ComfyUI MCP</text>
+  <text x="680" y="360" font-family="Arial" font-size="12" fill="#333">• Supabase MCP</text>
+  
+  <!-- Configure Agent Notes -->
+  <rect x="670" y="400" width="120" height="80" rx="5" ry="5" fill="white" stroke="#ccc"/>
+  <text x="680" y="420" font-family="Arial" font-size="12" fill="#333">• Name & type</text>
+  <text x="680" y="440" font-family="Arial" font-size="12" fill="#333">• Capabilities</text>
+  <text x="680" y="460" font-family="Arial" font-size="12" fill="#333">• Parameters</text>
+  
+  <!-- Test and Deploy Notes -->
+  <rect x="670" y="500" width="120" height="80" rx="5" ry="5" fill="white" stroke="#ccc"/>
+  <text x="680" y="520" font-family="Arial" font-size="12" fill="#333">• Sample tasks</text>
+  <text x="680" y="540" font-family="Arial" font-size="12" fill="#333">• Benchmarks</text>
+  <text x="680" y="560" font-family="Arial" font-size="12" fill="#333">• Deployment</text>
+</svg>

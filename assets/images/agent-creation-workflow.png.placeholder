@@ -1,0 +1,10 @@
+This is a placeholder for the Agent Creation Workflow diagram.
+
+The diagram should illustrate:
+1. Define Purpose - Identify the specific tasks the agent will perform
+2. Select Model - Choose an appropriate foundation model
+3. Choose MCP Servers - Select MCP servers based on required capabilities
+4. Configure Agent - Set agent name, description, type, capabilities, and parameters
+5. Test and Deploy - Test the agent with sample tasks and deploy for production use
+
+The diagram should use a flowchart style to show the sequence of steps in the agent creation process.

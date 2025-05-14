@@ -1,0 +1,54 @@
+title: Nexus MCP Hub Documentation
+description: Comprehensive documentation for the Nexus MCP Hub system
+theme: jekyll-theme-minimal
+baseurl: ""
+url: ""
+
+# Navigation
+header_pages:
+  - index.md
+  - architecture/system-overview.md
+  - mcp-servers/server-types.md
+  - agents/agent-types.md
+  - api/reference.md
+  - security/best-practices.md
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - README.md
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  tutorials:
+    output: true
+    permalink: /:collection/:name/
+  troubleshooting:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "assets/images"
+    values:
+      image: true

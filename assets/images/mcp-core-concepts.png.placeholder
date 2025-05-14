@@ -1,0 +1,9 @@
+This is a placeholder for the MCP Core Concepts diagram.
+
+The diagram should illustrate:
+1. Context - The shared state between a model and its environment
+2. Tools - Functions that models can call to interact with external systems
+3. Transport - The communication layer between models and tools (HTTP, WebSockets, stdio)
+4. Messages - Structured data exchanged between components
+
+The diagram should use a consistent style and color scheme, with clear labels and visual hierarchy.
